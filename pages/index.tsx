@@ -33,7 +33,7 @@ export default function Home() {
         <ConfettiOverlay />
         <div className="flex items-center justify-center h-screen w-screen">
           <h1 className="text-center font-bold text-8xl px-12 mb-12 z-50">
-            {weekType ? "It's Coding Week" : "It's Morbeting Week"}
+            {weekType ? "It's Coding Week" : "It's Marketing Week"}
           </h1>
         </div>
       </main>
