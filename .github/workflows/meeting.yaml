@@ -11,7 +11,7 @@ jobs:
     name: weekly ping
     runs-on: ubuntu-latest
     env:
-      DISCORD_WEBHOOK: ${{ secrets.DISCORD_MEETING_WEBHOOK }}
+      DISCORD_MEETING_WEBHOOK: ${{ secrets.DISCORD_MEETING_WEBHOOK }}
     steps:
       - uses: actions/setup-python@v2
         with:
