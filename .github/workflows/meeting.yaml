@@ -1,0 +1,23 @@
+name: Run meeting messages
+on:
+  push:
+    branches:
+      - "main"
+  # schedule:
+  #   - cron: "30 10 * * 0"
+
+jobs:
+  sendWeekly:
+    name: weekly ping
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_MEETING_WEBHOOK }}
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: execute python script # run the run.py to get the latest data
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install requests
+          echo -e "import requests\nimport os\nurl = os.environ['DISCORD_MEETING_WEBHOOK']\nresponse = requests.post(url, json={'content': 'Weekly meeting now :calendar_spiral:, @here jump to <#1028844449821904925>'})" | python
