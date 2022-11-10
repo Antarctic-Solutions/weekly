@@ -7,6 +7,8 @@ jobs:
   sendWeekly:
     name: weekly ping
     runs-on: ubuntu-latest
+    env:
+      DISCORD_WEBHOOK: ${{ env.DISCORD_WEBHOOK }}
     steps:
       - uses: actions/setup-python@v2
         with:
