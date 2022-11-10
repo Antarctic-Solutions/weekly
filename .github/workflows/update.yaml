@@ -13,4 +13,5 @@ jobs:
           python-version: "3.8"
       - name: execute python script # run the run.py to get the latest data
         run: |
+          sudo apt-get install python3-requests
           echo -e "import requests\nimport os\nurl = os.environ['DISCORD_WEBHOOK']\nresponse = requests.post(url, json={'content': 'https://weekly.antarcticsolutions.ca/'})" | python
