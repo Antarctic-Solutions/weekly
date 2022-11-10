@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: "3.8"
-      - name: execute python script # run the run.py to get the latest data
+      - name: execute python script
         run: |
           python3 -m pip install --upgrade pip
           pip install requests
