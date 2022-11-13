@@ -1,0 +1,20 @@
+name: Run meeting messages
+on:
+  schedule:
+    - cron: "30 1 * * 1"
+
+jobs:
+  sendWeekly:
+    name: weekly ping
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_MEETING_WEBHOOK: ${{ secrets.DISCORD_MEETING_WEBHOOK }}
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: execute python script # you could alternatively just use 1 curl command here
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install requests
+          echo -e "import requests\nimport os\nurl = os.environ['DISCORD_MEETING_WEBHOOK']\nresponse = requests.post(url, json={'content': 'Meeting in 30 mins @here'})" | python
