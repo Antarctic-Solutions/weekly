@@ -1,7 +1,7 @@
 name: Run Cron Messages
 on:
   schedule:
-    - cron: "1 2 * * 0"
+    - cron: "30 14 * * 1"
 
 jobs:
   sendWeekly:
