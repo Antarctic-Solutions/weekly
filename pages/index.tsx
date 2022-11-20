@@ -42,7 +42,9 @@ export default function Home() {
         <div className="flex justify-center">
           <p className="text-4xl text-center">
             {/* TODO: change depending on which blog it is */}
-            <Link href={weekType ? "#" : "#"}>Read More</Link>
+            <Link href="https://blog.antarcticsolutions.ca/blog/code-vs-marketing">
+              Read More
+            </Link>
           </p>
         </div>
       </footer>
