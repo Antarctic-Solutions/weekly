@@ -2,7 +2,7 @@
 
 Based on but exactly opposite of [codingweekmarketingweek.com](https://codingweekmarketingweek.com/)
 
-See blog post [COMING SOON]()
+See blog post [Coding vs Marketing](https://blog.antarcticsolutions.ca/blog/code-vs-marketing)
 
 ## About
 
