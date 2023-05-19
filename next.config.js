@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
+// set cache expiry for 1 hour
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  generateEtags: false,
   async headers() {
     return [
       {
@@ -10,7 +10,7 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "no-cache",
+            value: "public, max-age=3600",
           },
         ],
       },
